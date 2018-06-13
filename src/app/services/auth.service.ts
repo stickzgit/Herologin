@@ -9,4 +9,8 @@ export class AuthService {
 constructor(private _firebaseAuth: AngularFireAuth, private router: Router) { 
       this.user = _firebaseAuth.authState;
   }
+  signInRegular(email, password) {
+    const credential = firebase.auth.EmailAuthProvider.credential( email, password );
+ return this._firebaseAuth.auth.signInWithEmailAndPassword(email, password)
+ }
 }

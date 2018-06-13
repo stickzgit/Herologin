@@ -1,14 +1,19 @@
-<!-- <p>
-  <input #userlogin type="text" placeholder="Username">
+<p>
+  <input #email type="text" placeholder="Username">
   <br>
-  <input #passlogin type="text" placeholder="Password">
+  <input #password type="text" placeholder="Password">
   <br>
-  <button (login)=(userlogin.value,passlogin.value) >Submit</button>
-</p> -->
-<!-- <div class="form-group">
+  <button (click)="signInWithEmail(email.value,password.value)" >Submit</button>
+</p>
+
+ <!-- <div class="form-group">
+    <input #email type="text" placeholder="Username">
+    <br>
+    <input #password type="text" placeholder="Password">
+    <br>
   <button type="buton" class="btn btn-primary btn-block" style="margin-bottom: 20px" (click)="signInWithEmail()" 
     [disabled]="formCtrl.form.invalid">
     Login with Email
   
   </button>
-</div> -->
+</div>   -->
