@@ -30,6 +30,7 @@ import { AuthGuard } from './services/auth-guard.service';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    // AngularFireDatabase,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
