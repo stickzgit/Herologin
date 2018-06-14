@@ -2,12 +2,19 @@
 
 <div>
   <label>Hero name:
-    <input #heroName />
+    <form (ngSubmit)="addHero(heroName)" #heroName="ngForm">
+      <label for="name"> Name</label>
+      <input name="name" ngModel>
+      <label for="class"> class</label>
+      <input name="class" ngModel>
+      <button type="submit">add</button>
+      </form>
+    <!-- <input #heroName /> -->
   </label>
   <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(heroName.value); heroName.value=''">
+  <!-- <button (click)="add(heroName.value); heroName.value=''">
     add
-  </button>
+  </button> -->
 </div>
 
 <ul class="heroes">
@@ -19,3 +26,11 @@
     (click)="delete(hero)">x</button>
   </li>
 </ul>
+<!-- <tr *ngFor="let data of wikis">
+  <td>{{data.value.name}}</td>
+  <td>{{data.value.description}}</td> -->
+
+<tr *ngFor="let data of heronames">
+  <td>{{data.value.name}}</td> 
+  <td>{{data.value.class}}</td>
+  <td><button type="button" (click)="delHero(data)" >Delete</button></td>
