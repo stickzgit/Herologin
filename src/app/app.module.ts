@@ -20,7 +20,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from './services/auth.service';
-
+import { AuthGuard } from './services/auth-guard.service';
 @NgModule({
   imports: [
     BrowserModule,
@@ -47,7 +47,7 @@ import { AuthService } from './services/auth.service';
     HeroSearchComponent,
     LoginComponent
   ],
-  providers:[AuthService],  
+  providers:[AuthService,AuthGuard],  
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
